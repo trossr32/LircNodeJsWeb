@@ -53,6 +53,6 @@ app.use(function(err, req, res, next) {
 
 // global objects to use
 app.locals.devices = config.get('devices');
-app.locals.colWidth = Math.floor(12 / Object.keys(app.locals.devices).length);
+//app.locals.colWidth = Math.floor(12 / Object.keys(app.locals.devices).length);
 
 module.exports = app;
