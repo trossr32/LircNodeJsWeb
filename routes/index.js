@@ -4,14 +4,21 @@ var execSync = require('child_process').execSync; // this works better for macro
 var util = require('util');
 var express = require('express');
 var router = express.Router();
-var sleep = require('sleep');
 
 var devices = config.get('devices');
 var macros = config.get('macros');
 var irsendRoute = '/devices/:device/:directive/:key';
 
+var msleep = function(n) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n);
+}
+
+var sleep = function(n) {
+  msleep(n*1000);
+}
+
 var irsendRouteHandler = function(req, res){
-  var command = util.format('irsend %s %s %s', req.params.directive, devices[req.params.device].device, req.params.key);
+  var command = util.format('irsend %s %s %s', req.params.directive, req.params.device, req.params.key);
   var result;
   console.log('executing: ' + command);
   exec(command, (error, stdout, stderr) => {
@@ -25,13 +32,11 @@ var irsendRouteHandler = function(req, res){
 };
 
 router.get('/', function(req, res, next) {
-  var key = Object.keys(devices)[0];
-  res.render(key, { title: devices[key].title, device: key });
+  res.render('index', { title: 'Home' });
 });
 
 router.get('/devices/:device', function(req, res, next) {
-  var device = req.params.device;
-  res.render(device, {title: devices[device].title, device: device});
+  res.render(req.params.device);
 });
 
 router.post('/macro/:macro', function(req, res, next){

@@ -1,5 +1,26 @@
 extends layout
 
 block deviceKeys
-  h1= title
-  p Welcome to #{title}
+  div.container.mt-20
+    div.row.dashboard-remote
+      div.col-6.text-center
+        a(class='btn' href='/devices/master')
+          button
+            i.material-icons settings_remote
+            div MASTER
+      div.col-6.text-center
+        a(class='btn' href='/devices/tv')
+          button
+            i.material-icons tv
+            div TV
+    div.row.dashboard-remote
+      div.col-6.text-center
+        a(class='btn' href='/devices/soundbar')
+          button
+            i.material-icons speaker
+            div SOUNDBAR
+      div.col-6.text-center
+        a(class='btn' href='/devices/hdmi')
+          button
+            i.material-icons settings_input_hdmi
+            div HDMI

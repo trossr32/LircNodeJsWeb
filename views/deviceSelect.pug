@@ -1,9 +1,33 @@
-div.container
-  div.row
-    div.col-xs-12.col-sm-12.col-md-12.col-lg-12.bg-info.text-center 
-      h1 #{title}
-  div.row
-    each key in Object.keys(devices)
-      div(id='device-'+key, class=' col-xs-'+colWidth+' col-sm-'+colWidth+' col-md-'+colWidth+' col-lg-'+colWidth+' btn btn-info text-center') #{devices[key].label}
-  div
-    input#currentDevice(type='hidden', value=device)
+//- div.container
+//-   div.row
+//-     div.col-xs-12.col-sm-12.col-md-12.col-lg-12.bg-info.text-center 
+//-       h1 #{title}
+//-   div.row
+//-     each key in Object.keys(devices)
+//-       div(id='device-'+key, class=' col-xs-'+colWidth+' col-sm-'+colWidth+' col-md-'+colWidth+' col-lg-'+colWidth+' btn btn-info text-center') #{devices[key].label}
+//-   div
+//-     input#currentDevice(type='hidden', value=device)
+
+div(class='container' style='margin-top: 20px;')
+  div.row.dashboard-remote
+    div.col-6.text-center
+      a(class='btn' href='/devices/master')
+        button
+          i.material-icons settings_remote
+          div MASTER
+    div.col-6.text-center
+      a(class='btn' href='/devices/tv')
+        button
+          i.material-icons tv
+          div TV
+  div.row.dashboard-remote
+    div.col-6.text-center
+      a(class='btn' href='/devices/soundbar')
+        button
+          i.material-icons speaker
+          div SOUNDBAR
+    div.col-6.text-center
+      a(class='btn' href='/devices/hdmi')
+        button
+          i.material-icons settings_input_hdmi
+          div HDMI

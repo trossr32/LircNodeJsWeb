@@ -1,8 +1,59 @@
-body {
+/*body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}*/
+
+.bg-green {
+  background-color: #004d38 !important;
 }
+
+a.bg-green:hover, a.bg-green:focus,
+button.bg-green:hover,
+button.bg-green:focus {
+  background-color: #00664b !important;
+}
+
+.btn-with-icon {
+  margin-left: 10px;
+}
+
+.btn-remote {
+  width: 100%;
+}
+
+.row { margin-bottom: 10px;}
+
+.btn-remote i.material-icons { padding-top: 6px;}
+.btn-remote div { padding: 6px 0; }
+
+.nav-title-text {
+  margin-left: 16px;
+  margin-top: 2px;
+}
+
+.dashboard-remote {
+  margin-top: 20px;
+}
+
+.dashboard-remote button {
+  background-color: transparent;
+  border: 5px solid #20c997;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #20c997;
+  font-weight: 700;
+}
+
+.dashboard-remote button:hover, 
+.dashboard-remote a:hover { cursor: pointer;}
+
+  .dashboard-remote i {
+      font-size: 5em;
+  }
+
+  .mt-20 { margin-top: 20px;}
+  .mt-30 { margin-top: 30px;}

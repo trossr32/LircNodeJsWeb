@@ -1,1 +1,26 @@
-{}
+{
+    "devices":{
+      "tv":{
+        "title": "TV",
+        "label": "TV",
+        "device": "LoungeLG_TV"
+      },
+      "hdmi":{
+        "title": "HDMI Splitter",
+        "label": "HDMI",
+        "device": "HdmiSplitter"
+      },
+      "soundbar":{
+        "title": "Soundbar",
+        "label": "Soundbar",
+        "device": "SoundBar"
+      }
+    },
+    "macros":{
+      "lounge_power": [
+        { "device": "tv",    "directive": "SEND_ONCE", "key": "KEY_POWER" },
+        { "device": "hdmi",  "directive": "SEND_ONCE", "key": "KEY_POWER" }
+      ]
+    }
+  }
+  
