@@ -36,7 +36,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/devices/:device', function(req, res, next) {
-  res.render(req.params.device);
+  res.render(req.params.device, {title: devices[device].title, device: device});
 });
 
 router.post('/macro/:macro', function(req, res, next){
