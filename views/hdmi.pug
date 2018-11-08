@@ -1,0 +1,35 @@
+extends layout
+
+block deviceKeys
+  h5(class='text-info' style='text-align: center;') HDMI Splitter Remote
+  
+  div.container.mt-20
+    div.row
+      div.col-3
+        button(class='btn btn-danger btn-remote' data-ircommand='HdmiSplitter,Key,POWER')
+          i.material-icons power_settings_new
+      div.col
+
+    div.row.mt-30
+      div.col-3
+        button(class='btn btn-default btn-remote' data-ircommand='HdmiSplitter,Key,1')
+          div 1
+      div.col
+      div.col-3
+        button(class='btn btn-default btn-remote' data-ircommand='HdmiSplitter,Key,2')
+          div 2
+      div.col
+      div.col-3
+        button(class='btn btn-default btn-remote' data-ircommand='HdmiSplitter,Key,3')
+          div 3
+
+    div.row.mt-30
+      div.col-3
+        button(class='btn btn-default btn-remote' data-ircommand='HdmiSplitter,Key,4')
+          div 4
+      div.col
+      div.col-3
+        button(class='btn btn-default btn-remote' data-ircommand='HdmiSplitter,Key,5')
+          div 5
+      div.col
+      div.col-3 &nbsp;

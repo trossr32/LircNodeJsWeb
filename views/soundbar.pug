@@ -1,0 +1,42 @@
+extends layout
+
+block deviceKeys
+  h5(class='text-info' style='text-align: center;') Soundbar Remote
+  
+  div.container.mt-20
+    div.row
+      div.col-3
+        button(class='btn btn-danger btn-remote' data-ircommand='SoundBar,Key,POWER')
+          i.material-icons power_settings_new
+      div.col
+      div.col-3
+        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,BT')
+          i.material-icons bluetooth
+
+    div.row.mt-30
+      div.col-3
+        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,MINUS')
+          i.material-icons volume_down
+      div.col
+      div.col-3
+        button(class='btn btn-warning btn-remote' data-ircommand='SoundBar,Key,MUTE')
+          i.material-icons volume_off
+      div.col
+      div.col-3
+        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,PLUS')
+          i.material-icons volume_up
+
+    div.row.mt-30
+      div.col-3
+        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,PREV')
+          i.material-icons skip_previous
+      div.col
+      div.col-3
+        button(class='btn btn-warning btn-remote' data-ircommand='SoundBar,Key,PLAYPAUSE')
+          span
+            i(class='material-icons' style='margin-left:-6px;') play_arrow
+            i(class='material-icons' style='margin-left:-8px;') pause
+      div.col
+      div.col-3
+        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,NEXT')
+          i.material-icons skip_next

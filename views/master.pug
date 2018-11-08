@@ -1,0 +1,23 @@
+extends layout
+
+block deviceKeys
+  h5(class='text-info' style='text-align: center;') Master Remote
+
+  div.container.mt-20
+    div.row
+      div.col-3
+        button(class='btn btn-danger btn-remote' data-ircommand='Macro,lounge_power')
+          i.material-icons power_settings_new
+      div.col
+    div.row.mt-30
+      div.col-3
+        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,MINUS')
+          i.material-icons volume_down
+      div.col
+      div.col-3
+        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,PLUS')
+          i.material-icons volume_up
+      div.col
+      div.col-3
+        button(class='btn btn-warning btn-remote' data-ircommand='SoundBar,Key,MUTE')
+          i.material-icons volume_off
