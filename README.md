@@ -1,3 +1,49 @@
+# Modifications and notes (original readme below)
+
+## Setting up as a systemd service
+
+Create a service file:
+
+```bash
+sudo nano /lib/systemd/system/lircnodejsweb.service
+```
+
+Enter the following script
+
+```bash
+ [Unit]
+ Description=Greenhouse hub
+ After=multi-user.target
+
+ [Service]
+ Type=idle
+ WorkingDirectory=/home/pi/nodejs/LircNodeJsWeb/Web
+ ExecStart=/usr/bin/npm start
+ Environment=NODE_ENV=production PORT=80
+
+ [Install]
+ WantedBy=multi-user.target
+```
+
+Enable the service
+
+```bash
+sudo systemctl enable lircnodejsweb.service
+```
+
+Start the service
+
+```bash
+sudo systemctl start lircnodejsweb.service
+```
+
+## Publish commands
+
+cd ~/nodejs/LircNodeWebJs; sudo systemctl stop lircnodejsweb.service; git reset --hard; git pull; cd Web; npm i; sudo systemctl start lircnodejsweb.service
+
+Or use the accompanying console application
+
+
 # LIRC Node.js Web
 
 By bbtinkerer (<http://bb-tinkerer.blogspot.com/>)
