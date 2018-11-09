@@ -4,7 +4,7 @@ var execSync = require('child_process').execSync; // this works better for macro
 var util = require('util');
 var express = require('express');
 var router = express.Router();
-////var manifest = require('../public/assets/manifest.json');
+var manifest = require('../public/assets/manifest.json');
 
 var devices = config.get('devices');
 var macros = config.get('macros');
@@ -36,9 +36,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
-//router.get('/assets/manifest.json', function(req, res, next) {
-//  res.json(manifest);
-//});
+router.get('/assets/manifest.json', function(req, res, next) {
+  res.json(manifest);
+});
 
 router.get('/devices/:device', function(req, res, next) {
   var device = req.params.device;
