@@ -46,6 +46,12 @@ button.bg-green:focus {
   padding: 10px 20px;
   color: #20c997;
   font-weight: 700;
+  font-size: 0.8em;
+  min-width: 121px;
+}
+
+.dashboard-remote a {
+  padding: 0;
 }
 
 .dashboard-remote button:hover, 
