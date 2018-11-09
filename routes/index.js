@@ -4,6 +4,7 @@ var execSync = require('child_process').execSync; // this works better for macro
 var util = require('util');
 var express = require('express');
 var router = express.Router();
+var manifest = require('../public/assets/manifest.json');
 
 var devices = config.get('devices');
 var macros = config.get('macros');
@@ -23,7 +24,7 @@ var irsendRouteHandler = function(req, res){
   console.log('executing: ' + command);
   exec(command, (error, stdout, stderr) => {
     result = stdout.trim();
-    // success returns a blank string, I want to return something back to the browswer
+    // success returns a blank string, I want to return something back to the browser
     if(!result){
       result = "success";
     }
@@ -33,6 +34,10 @@ var irsendRouteHandler = function(req, res){
 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
+});
+
+router.get('/assets/manifest.json', function(req, res, next) {
+  res.json(manifest);
 });
 
 router.get('/devices/:device', function(req, res, next) {
