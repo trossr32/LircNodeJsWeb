@@ -39,7 +39,9 @@ sudo systemctl start lircnodejsweb.service
 
 ## Publish commands
 
+```bash
 cd ~/nodejs/LircNodeWebJs; sudo systemctl stop lircnodejsweb.service; git reset --hard; git pull; cd Web; npm i; sudo systemctl start lircnodejsweb.service
+```
 
 Or use the accompanying console application
 
