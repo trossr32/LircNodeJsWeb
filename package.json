@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "/opt/nodejs/bin/nodemon ./bin/www"
+    "start": "node ./bin/www",
+    "stop": "process.exit()"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
