@@ -4,9 +4,11 @@ html(lang='en')
     title= title
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scal=1')
+    meta(name='mobile-web-app-capable' content='yes')
     link(rel='stylesheet', href='/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/style.css')
     link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    link(rel='manifest' href='/manifest.json')
   body.bg-dark.text-light
     nav.navbar.navbar-expand-md.navbar-dark.bg-green.justify-content-between
       a(class='navbar-brand' href='/')

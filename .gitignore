@@ -33,3 +33,4 @@ npm-debug.log
 config/default.json
 config/production.json
 
+/public/assets/greenhouse.png
