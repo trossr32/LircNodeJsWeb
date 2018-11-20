@@ -22,7 +22,7 @@
       }
     },
     "macros":{
-      "lounge_power": [
+      "LoungePower": [
         { "device": "tv",    "directive": "SEND_ONCE", "key": "KEY_POWER" },
         { "device": "hdmi",  "directive": "SEND_ONCE", "key": "KEY_POWER" }
       ]

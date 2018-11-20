@@ -1,11 +1,11 @@
 $(document).ready(function(){
   $('[data-ircommand]').click(function() {
-    var splitter = $(this).attr("data-ircommand").split(',');
+    var cmd = $(this).data("ircommand");
 
-    if (splitter.length === 2) {
-      postKey('/macro/' + splitter[1]);
+    if (cmd.type === 'macro') {
+      postKey('/macro/' + cmd.key);
     } else {
-      postKey('/devices/' + splitter[0] + '/SEND_ONCE/' + 'KEY_' + splitter[2]);
+      postKey('/devices/' + cmd.device + '/SEND_ONCE/KEY_' + cmd.key + '/' + cmd.count);
     }
   });
 });

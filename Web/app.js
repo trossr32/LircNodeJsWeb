@@ -56,4 +56,6 @@ app.use(function(err, req, res, next) {
 app.locals.devices = config.get('devices');
 //app.locals.colWidth = Math.floor(12 / Object.keys(app.locals.devices).length);
 
+//app.listen(3000, () => console.log('Example app listening on port 3000!'))
+
 module.exports = app;

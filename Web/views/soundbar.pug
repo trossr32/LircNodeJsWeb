@@ -6,37 +6,37 @@ block deviceKeys
   div.container.mt-20
     div.row
       div.col-3
-        button(class='btn btn-danger btn-remote' data-ircommand='SoundBar,Key,POWER')
+        button(class='btn btn-danger btn-remote' data-ircommand='{"type":"key","device":"SoundBar","key":"POWER","count":"1"}')
           i.material-icons power_settings_new
       div.col
       div.col-3
-        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,BT')
+        button(class='btn btn-info btn-remote' data-ircommand='{"type":"key","device":"SoundBar","key":"BT","count":"1"}')
           i.material-icons bluetooth
 
     div.row.mt-30
       div.col-3
-        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,MINUS')
+        button(class='btn btn-info btn-remote' data-ircommand='{"type":"key","device":"SoundBar","key":"MINUS","count":"1"}')
           i.material-icons volume_down
       div.col
       div.col-3
-        button(class='btn btn-warning btn-remote' data-ircommand='SoundBar,Key,MUTE')
+        button(class='btn btn-warning btn-remote' data-ircommand='{"type":"key","device":"SoundBar","key":"MUTE","count":"1"}')
           i.material-icons volume_off
       div.col
       div.col-3
-        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,PLUS')
+        button(class='btn btn-info btn-remote' data-ircommand='{"type":"key","device":"SoundBar","key":"PLUS","count":"1"}')
           i.material-icons volume_up
 
     div.row.mt-30
       div.col-3
-        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,PREV')
+        button(class='btn btn-info btn-remote' data-ircommand='{"type":"key","device":"SoundBar","key":"PREV","count":"1"}')
           i.material-icons skip_previous
       div.col
       div.col-3
-        button(class='btn btn-warning btn-remote' data-ircommand='SoundBar,Key,PLAYPAUSE')
+        button(class='btn btn-warning btn-remote' data-ircommand='{"type":"key","device":"SoundBar","key":"PLAYPAUSE","count":"1"}')
           span
             i(class='material-icons' style='margin-left:-6px;') play_arrow
             i(class='material-icons' style='margin-left:-8px;') pause
       div.col
       div.col-3
-        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,NEXT')
+        button(class='btn btn-info btn-remote' data-ircommand='{"type":"key","device":"SoundBar","key":"NEXT","count":"1"}')
           i.material-icons skip_next

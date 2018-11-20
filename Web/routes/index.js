@@ -8,7 +8,7 @@ var manifest = require('../public/assets/manifest.json');
 
 var devices = config.get('devices');
 var macros = config.get('macros');
-var irsendRoute = '/devices/:device/:directive/:key';
+var irsendRoute = '/devices/:device/:directive/:key/:count';
 
 var msleep = function(n) {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n);
@@ -19,7 +19,7 @@ var sleep = function(n) {
 }
 
 var irsendRouteHandler = function(req, res){
-  var command = util.format('irsend %s %s %s', req.params.directive, req.params.device, req.params.key);
+  var command = util.format('irsend --count=%s %s %s %s', req.params.count, req.params.directive, req.params.device, req.params.key);
   var result;
   console.log('executing: ' + command);
   exec(command, (error, stdout, stderr) => {
@@ -55,7 +55,7 @@ router.post('/macro/:macro', function(req, res, next){
   if(macro){
     for(var i = 0, len = macro.length; i < len; i++){
       step = macro[i];
-      command = util.format('irsend %s %s %s', step.directive, devices[step.device].device, step.key);
+      command = util.format('irsend --count=%s %s %s %s', step.count, step.directive, devices[step.device].device, step.key);
       console.log('executing: ' + command);
       execSync(command);
       if(step.delay){

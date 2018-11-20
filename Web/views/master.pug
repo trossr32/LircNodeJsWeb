@@ -6,18 +6,18 @@ block deviceKeys
   div.container.mt-20
     div.row
       div.col-3
-        button(class='btn btn-danger btn-remote' data-ircommand='Macro,lounge_power')
+        button(class='btn btn-danger btn-remote' data-ircommand='{"type":"macro","key":"LoungePower","count":"1"}')
           i.material-icons power_settings_new
       div.col
     div.row.mt-30
       div.col-3
-        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,MINUS')
+        button(class='btn btn-info btn-remote' data-ircommand='{"type":"key","device":"SoundBar","key":"MINUS","count":"1"}')
           i.material-icons volume_down
       div.col
       div.col-3
-        button(class='btn btn-info btn-remote' data-ircommand='SoundBar,Key,PLUS')
+        button(class='btn btn-info btn-remote' data-ircommand='{"type":"key","device":"SoundBar","key":"PLUS","count":"1"}')
           i.material-icons volume_up
       div.col
       div.col-3
-        button(class='btn btn-warning btn-remote' data-ircommand='SoundBar,Key,MUTE')
+        button(class='btn btn-warning btn-remote' data-ircommand='{"type":"key","device":"SoundBar","key":"MUTE","count":"1"}')
           i.material-icons volume_off
